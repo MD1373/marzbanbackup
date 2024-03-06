@@ -81,7 +81,7 @@ done
 
 if [[ "$crontabs" == "y" ]]; then
 # remove cronjobs
-sudo crontab -l | grep -vE '/root/ac-backup.+\.sh' | crontab -
+crontab -l | grep -vE '/root/ac-backup.+\.sh' | crontab -
 fi
 
 
@@ -207,7 +207,7 @@ comment=$(trim "$comment")
 
 # install zip
 # نصب پکیج zip
-sudo apt install zip -y
+apt install zip -y
 
 # send backup to telegram
 # ارسال فایل پشتیبانی به تلگرام
